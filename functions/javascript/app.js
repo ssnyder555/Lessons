@@ -59,13 +59,13 @@ console.log('it works');
    // console.log('hello ${name}');
 
  // }
- // sayName('Jerry');
- // sayName('Kramer');
+ sayName('Jerry');
+ sayName('Kramer');
 
- // when you start repeating yourself its
- // an indaction that you could use a functions
+ when you start repeating yourself its
+ an indaction that you could use a functions
 
-// repeat yourself with minor differences
+repeat yourself with minor differences
 // console.log('Hello')
 
 // write a function printParameter then takes parameter input.
