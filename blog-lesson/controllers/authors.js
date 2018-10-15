@@ -6,9 +6,12 @@ const Author = require('../models/authors');
 
 
 router.ger('/', (req, res) => {
-  res.render('authors/index.ejs');
+  Author.find{}, (err, foundAuthors) => {
+  res.render('authors/index.ejs' {
+    authors: foundAuthors
+  });
+})
 });
-
 router.get('/new', (req, res) => {
   res.render('/authors/new.ejs');
 });
@@ -18,7 +21,7 @@ router.post('/', (req, res) => {
     console.log(createdAuthor, ' createdAuthor');
     if(err){
       console.log(err);
-    } else 
+    } else
   })
 });
 

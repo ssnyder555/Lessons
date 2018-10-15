@@ -9,5 +9,9 @@ mongoose.connection.on('connected', () => {
 });
 
 mongoose.connection.on('disconnected', () => {
-  console.log('Mongoose');
-})
+  console.log('Mongoose disconnected ');
+});
+
+mongoose.connection.on('error', (err) => {
+  console.log('Mongoose error ', err);
+});
