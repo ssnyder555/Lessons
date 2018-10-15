@@ -3,6 +3,13 @@ const app  = express();
 
  require('/db/db');
 
+const authorsController = require('./controllers/authors');
+
+// setting up the middleware for our controllers
+// every route will start with controllers
+
+ app.use('/authors', authorsController);
+
 app.get('/', (req, res) => {
   res.render('index.ejs');
 })
