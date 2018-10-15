@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.render('index.ejs');
 });
 
-router.get('/:id', (req, res) => {
+app.get('/:id', (req, res) => {
   Authors.findById(req.params.id, (err, authorFound) => {
 
     res.render('/authors/shows.ejs', {
