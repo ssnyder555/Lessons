@@ -35,7 +35,14 @@ router.post('/', (req, res) => {
       res.redirect('/authors')
     }
   });
+});
 
+router.get('/:id/edit', (req, res)=>{
+	Author.findById(req.params.id, (err, foundAuthor)=>{
+		res.render('authors/edit.ejs', {
+			author: editAuthor
+		});
+	});
 });
 
 
