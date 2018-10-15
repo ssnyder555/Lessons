@@ -9,7 +9,18 @@ router.ger('/', (req, res) => {
   res.render('authors/index.ejs');
 });
 
-router.get('/new')
+router.get('/new', (req, res) => {
+  res.render('/authors/new.ejs');
+});
+router.post('/', (req, res) => {
+  Author.create(req.body, (err, createdAuthor) => {
+    console.log(req.body, ' this is req.body');
+    console.log(createdAuthor, ' createdAuthor');
+    if(err){
+      console.log(err);
+    } else 
+  })
+});
 
 
 
